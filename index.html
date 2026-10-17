@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Vinícius Duarte">
+  <meta name="description"
+    content="Portfólio de Vinícius Duarte, desenvolvedor de software em formação. Conheça suas habilidades, formação e formas de contato.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Vinícius Duarte</title>
+  <link rel="icon" type="image/png" sizes="512x512" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://cdn.tailwindcss.com" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-white text-gray-900 antialiased selection:bg-gray-900 selection:text-white">
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Header / Logo -->
+  <header class="site-header mx-auto py-6 sm:py-8 flex flex-col sm:flex-row justify-between items-center gap-5">
+    <a href="#" aria-label="Vinícius Duarte - início">
+      <img src="img/logo.png" alt="Vinícius Duarte" class="h-16 w-auto object-contain">
+    </a>
+    <nav class="site-nav flex flex-wrap justify-center gap-x-5 gap-y-3 text-xs sm:text-sm font-medium text-gray-600">
+      <a href="#sobre" class="hover:text-black transition">Sobre</a>
+      <a href="#habilidades" class="hover:text-black transition">Habilidades</a>
+      <a href="#formacao" class="hover:text-black transition">Formação</a>
+      <a href="#contato" class="hover:text-black transition">Contato</a>
+    </nav>
+  </header>
+
+  <main id="conteudo" class="site-main mx-auto py-10 space-y-28">
+
+    <!-- Hero / Seção Principal -->
+    <section class="grid md:grid-cols-12 gap-12 items-center">
+      <!-- Coluna da Foto de Perfil -->
+      <div class="md:col-span-5 flex flex-col items-center md:items-start">
+        <div
+          class="profile-card w-full max-w-72 h-80 sm:h-96 rounded-3xl bg-gray-100 flex flex-col items-center justify-center text-gray-400 shadow-xl border border-gray-100 overflow-hidden relative group">
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition">
+          </div>
+          <i class="fa-solid fa-user text-8xl text-gray-300 mb-4 transition group-hover:scale-105"></i>
+          <span class="text-sm font-medium text-gray-400"></span>
+        </div>
+        <div class="mt-6 text-center md:text-left">
+          <p class="text-sm text-gray-500">👋🏼 Oi, eu sou o</p>
+          <h1 class="text-2xl font-bold tracking-tight text-gray-900" aria-label="Vinícius Duarte :)">
+            <span class="typing-name-wrapper">
+              <span class="typing-name-spacer" aria-hidden="true">Vinícius Duarte :)</span>
+              <span class="typing-name" aria-hidden="true">Vinícius Duarte :)</span>
+            </span>
+          </h1>
+          <p class="text-sm text-gray-400 mt-1 flex items-center gap-1.5 justify-center md:justify-start">
+            <i class="fa-solid fa-code text-xs"></i> dev em formação
+          </p>
+        </div>
+      </div>
+
+      <!-- Coluna de Apresentação -->
+      <div class="md:col-span-7 space-y-8 text-lg text-gray-600 leading-relaxed">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-gray-900 leading-tight">
+          💻 Desenvolvedor de software em formação focado em criar aplicações eficientes com organização e
+          otimização.
+        </h2>
+
+        <div class="pt-2 flex flex-wrap justify-center md:justify-start gap-4">
+          <a href="#contato"
+            class="button-hover bg-black text-white px-8 py-3.5 rounded-full text-base font-medium hover:bg-gray-800 transition shadow-md">
+            🗨️ Vamos conversar
+          </a>
+          <a href="#sobre"
+            class="button-hover border border-gray-200 px-8 py-3.5 rounded-full text-base font-medium hover:bg-gray-50 transition text-gray-700">
+            👤 Conhecer mais
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="bg-gray-50/70 border border-gray-100 rounded-3xl p-8 md:p-12 card-hover">
+      <h2 class="text-2xl font-bold mb-6 text-gray-900 tracking-tight">👤 Sobre mim</h2>
+      <div class="space-y-4 text-gray-600 text-lg leading-relaxed">
+        <p>Atualmente, meu processo de estudo fora da escola é voltado para algoritmos e lógica de programação usando
+          VisuAlg e Scratch, por meio do Curso em Vídeo, do professor Gustavo Guanabara.</p>
+
+        <p>Estou sempre buscando novos conhecimentos na minha área, procurando estar bem preparado para diferentes
+          oportunidades.</p>
+
+        <p>Meu inglês está em nível intermediário-avançado e sigo em processo de estudo na Wizard, o que já me permite
+          ler documentações, interpretar materiais da área, pesquisar tecnologias com autonomia e ter conversas fluidas
+          no idioma.</p>
+      </div>
+    </section>
+
+    <!-- Habilidades (Tamanho expandido ideal para tela 1920px) -->
+    <section id="habilidades">
+      <h2 class="text-2xl font-bold mb-8 text-gray-900 tracking-tight">🥷🏼 Habilidades</h2>
+      <div class="skills-list flex gap-4">
+        <span
+          class="skill-pill flex-none text-center bg-white px-6 py-4 rounded-2xl shadow-sm border border-gray-200 text-base font-semibold text-gray-800">Canva</span>
+        <span
+          class="skill-pill flex-none text-center bg-white px-6 py-4 rounded-2xl shadow-sm border border-gray-200 text-base font-semibold text-gray-800">Digitação</span>
+        <span
+          class="skill-pill flex-none text-center bg-white px-6 py-4 rounded-2xl shadow-sm border border-gray-200 text-base font-semibold text-gray-800">Informática</span>
+        <span
+          class="skill-pill flex-none text-center bg-white px-6 py-4 rounded-2xl shadow-sm border border-gray-200 text-base font-semibold text-gray-800">Inglês</span>
+        <span
+          class="skill-pill flex-none text-center bg-white px-6 py-4 rounded-2xl shadow-sm border border-gray-200 text-base font-semibold text-gray-800">IA (Inteligência
+          Artificial)</span>
+        <span
+          class="skill-pill flex-none text-center bg-white px-6 py-4 rounded-2xl shadow-sm border border-gray-200 text-base font-semibold text-gray-800">Lógica
+          de Programação</span>
+        <span
+          class="skill-pill flex-none text-center bg-white px-6 py-4 rounded-2xl shadow-sm border border-gray-200 text-base font-semibold text-gray-800">Microsoft
+          Windows</span>
+        <span
+          class="skill-pill flex-none text-center bg-white px-6 py-4 rounded-2xl shadow-sm border border-gray-200 text-base font-semibold text-gray-800">Scratch</span>
+        <span
+          class="skill-pill flex-none text-center bg-white px-6 py-4 rounded-2xl shadow-sm border border-gray-200 text-base font-semibold text-gray-800">VisuAlg</span>
+      </div>
+    </section>
+
+    <!-- Formação -->
+    <section id="formacao" class="space-y-6">
+      <h2 class="text-2xl font-bold mb-6 text-gray-900 tracking-tight">🎓 Formação</h2>
+
+      <ol class="formation-timeline">
+        <li class="formation-timeline-item">
+          <div class="formation-date"><time datetime="2026-10">OUT 2026</time></div>
+          <article
+            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 card-hover flex flex-col md:flex-row gap-6 items-center">
+            <img src="img/logica.png" alt="Algoritmos e Lógica de Programação" width="224" height="144" loading="lazy"
+              decoding="async"
+              class="w-full md:w-56 h-36 object-contain bg-gray-50 p-2 rounded-xl border border-gray-100">
+            <div class="flex-1 w-full">
+              <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                <h3 class="text-xl font-bold text-gray-900">Algoritmos e Lógica de Programação [40 Horas]</h3>
+                <span class="formation-status status-in-progress">Em andamento</span>
+              </div>
+              <p class="text-sm font-semibold text-gray-700 mt-2">Curso em Vídeo • Gustavo Guanabara</p>
+              <p class="text-sm text-gray-500 mt-2">Curso online com aprofundamento em lógica de programação utilizando
+                VisuAlg e Scratch, construindo uma base sólida para o desenvolvimento de software.</p>
+            </div>
+          </article>
+        </li>
+
+        <li class="formation-timeline-item">
+          <div class="formation-date"><time datetime="2026-10">OUT 2026</time></div>
+          <article
+            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 card-hover flex flex-col md:flex-row gap-6 items-center">
+            <img src="img/si1.png" alt="Segurança da Informação: Módulo 01" width="224" height="144" loading="lazy"
+              decoding="async"
+              class="w-full md:w-56 h-36 object-contain bg-gray-50 p-2 rounded-xl border border-gray-100">
+            <div class="flex-1 w-full">
+              <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                <h3 class="text-xl font-bold text-gray-900">Segurança da Informação: Módulo 01 [20 HORAS]</h3>
+                <span class="formation-status status-completed">Concluído</span>
+              </div>
+              <p class="text-sm font-semibold text-gray-700 mt-2">Curso em Vídeo • Gustavo Guanabara</p>
+              <p class="text-sm text-gray-500 mt-2">Aborda o uso seguro de dispositivos móveis e redes sociais,
+                incluindo cuidados com o compartilhamento de informações, senhas e verificação em duas etapas.</p>
+            </div>
+          </article>
+        </li>
+
+        <li class="formation-timeline-item">
+          <div class="formation-date"><time datetime="2026-10">OUT 2026</time></div>
+          <article
+            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 card-hover flex flex-col md:flex-row gap-6 items-center">
+            <img src="img/si0.png" alt="Segurança da Informação: Módulo 00" width="224" height="144" loading="lazy"
+              decoding="async"
+              class="w-full md:w-56 h-36 object-contain bg-gray-50 p-2 rounded-xl border border-gray-100">
+            <div class="flex-1 w-full">
+              <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                <h3 class="text-xl font-bold text-gray-900">Segurança da Informação: Módulo 00 [20 HORAS]</h3>
+                <span class="formation-status status-completed">Concluído</span>
+              </div>
+              <p class="text-sm font-semibold text-gray-700 mt-2">Curso em Vídeo • Gustavo Guanabara</p>
+              <p class="text-sm text-gray-500 mt-2">Introdução aos fundamentos da segurança da informação, incluindo os
+                princípios de confidencialidade, integridade e disponibilidade.</p>
+            </div>
+          </article>
+        </li>
+
+        <li class="formation-timeline-item">
+          <div class="formation-date"><time datetime="2026">2026</time></div>
+          <article
+            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 card-hover flex flex-col md:flex-row gap-6 items-center">
+            <img src="img/dc.png" alt="Missão Programação com IA do Zero, DevClub" width="224" height="144"
+              loading="lazy" decoding="async"
+              class="w-full md:w-56 h-36 object-contain bg-gray-50 p-2 rounded-xl border border-gray-100">
+            <div class="flex-1 w-full">
+              <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                <h3 class="text-xl font-bold text-gray-900">Missão Programação com IA do Zero</h3>
+                <span class="formation-status status-completed">Concluído</span>
+              </div>
+              <p class="text-sm font-semibold text-gray-700 mt-2">DevClub</p>
+              <p class="text-sm text-gray-500 mt-2">Introdução à inteligência artificial e às linguagens de programação,
+                com atividades práticas para criar projetos do zero.</p>
+            </div>
+          </article>
+        </li>
+
+        <li class="formation-timeline-item">
+          <div class="formation-date"><time datetime="2025-02">FEV 2025 - DEZ 2027</time></div>
+          <article
+            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 card-hover flex flex-col md:flex-row gap-6 items-center">
+            <img src="img/etec.png" alt="Etec Euro Albino de Souza" width="224" height="144" loading="lazy"
+              decoding="async" class="w-full md:w-56 h-36 object-cover rounded-xl border border-gray-100">
+            <div class="flex-1 w-full">
+              <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                <h3 class="text-xl font-bold text-gray-900">Etec</h3>
+                <span class="formation-status status-in-progress">Em andamento</span>
+              </div>
+              <p class="text-sm font-semibold text-gray-700 mt-2">Etec Euro Albino de Souza • Mogi Guaçu - SP</p>
+              <p class="text-sm text-gray-500 mt-2">Curso técnico em Desenvolvimento de Sistemas em período integral
+                (1200 horas), com foco em fundamentos de programação, lógica e desenvolvimento de aplicações.</p>
+            </div>
+          </article>
+        </li>
+
+        <li class="formation-timeline-item">
+          <div class="formation-date"><time datetime="2023-02">FEV 2023 - MAI 2025</time></div>
+          <article
+            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 card-hover flex flex-col md:flex-row gap-6 items-center">
+            <img src="img/mc.png" alt="Microcamp, curso profissionalizante de informática" width="224" height="144"
+              loading="lazy" decoding="async"
+              class="w-full md:w-56 h-36 object-contain bg-gray-50 p-2 rounded-xl border border-gray-100">
+            <div class="flex-1 w-full">
+              <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                <h3 class="text-xl font-bold text-gray-900">Informática Avançada</h3>
+                <span class="formation-status status-completed">Concluído</span>
+              </div>
+              <p class="text-sm font-semibold text-gray-700 mt-2">Microcamp • Curso Profissionalizante • 208 horas</p>
+              <p class="text-sm text-gray-500 mt-2">Conteúdos abordados: digitação; lógica de programação com
+                fluxogramas usando o Wondershare EdrawMax e VisuAlg; Scratch; e Microsoft Windows, especialmente Windows
+                11.</p>
+              <p class="text-sm text-gray-500 mt-2">🎯 Resultado Excepcional: nota máxima em todos os módulos!</p>
+            </div>
+          </article>
+        </li>
+
+        <li class="formation-timeline-item">
+          <div class="formation-date"><time datetime="2022">2022</time></div>
+          <article
+            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 card-hover flex flex-col md:flex-row gap-6 items-center">
+            <img src="img/wizard.png" alt="Curso de inglês Wizard by Pearson" width="224" height="144" loading="lazy"
+              decoding="async"
+              class="w-full md:w-56 h-36 object-contain bg-gray-50 p-2 rounded-xl border border-gray-100">
+            <div class="flex-1 w-full">
+              <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                <h3 class="text-xl font-bold text-gray-900">Inglês Intermediário-Avançado</h3>
+                <span class="formation-status status-in-progress">Em andamento</span>
+              </div>
+              <p class="text-sm font-semibold text-gray-700 mt-2">Wizard by Pearson</p>
+              <p class="text-sm text-gray-500 mt-2">Formação em inglês com conteúdos dos livros Teens 2, Teens 4, Teens
+                6, Teens 8, W10 e W12.</p>
+            </div>
+          </article>
+        </li>
+
+        <li class="formation-timeline-item">
+          <div class="formation-date"><time datetime="2019">2019 - 2021</time></div>
+          <article
+            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 card-hover flex flex-col md:flex-row gap-6 items-center">
+            <img src="img/wizkids.png" alt="WizKids, Wizard by Pearson" width="224" height="144" loading="lazy"
+              decoding="async"
+              class="w-full md:w-56 h-36 object-contain bg-gray-50 p-2 rounded-xl border border-gray-100">
+            <div class="flex-1 w-full">
+              <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                <h3 class="text-xl font-bold text-gray-900">WizKids • Inglês Kids / Básico</h3>
+                <span class="formation-status status-completed">Concluído</span>
+              </div>
+              <p class="text-sm font-semibold text-gray-700 mt-2">Wizard by Pearson • 210 horas</p>
+              <p class="text-sm text-gray-500 mt-2">Curso de inglês para crianças e nível básico, com conteúdos dos
+                livros Kids 2, Kids 4 e Next Generations.</p>
+            </div>
+          </article>
+        </li>
+
+        <li class="formation-timeline-item">
+          <div class="formation-date"><time datetime="2014-02">FEV 2014 - DEZ 2024</time></div>
+          <article
+            class="bg-white rounded-2xl p-6 shadow-sm border border-gray-200 card-hover flex flex-col md:flex-row gap-6 items-center">
+            <img src="img/feg.png" alt="Fundação Educacional Guaçuana (F.E.G.)" width="224" height="144" loading="lazy"
+              decoding="async"
+              class="w-full md:w-56 h-36 object-contain bg-gray-50 p-2 rounded-xl border border-gray-100">
+            <div class="flex-1 w-full">
+              <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2">
+                <h3 class="text-xl font-bold text-gray-900">Formação Escolar</h3>
+                <span class="formation-status status-completed">Concluído</span>
+              </div>
+              <p class="text-sm font-semibold text-gray-700 mt-2">Escola "Professor Cid Chiarelli" • Fundação
+                Educacional Guaçuana (F.E.G.)</p>
+              <p class="text-sm text-gray-500 mt-2">Pré-Escola (Jardim I e II) e Ensino Fundamental I e II.</p>
+            </div>
+          </article>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="max-w-xl mx-auto text-center space-y-6">
+      <h2 class="text-2xl font-bold text-gray-900 tracking-tight">🗨️ Vamos conversar?</h2>
+      <p class="text-gray-500 text-sm">Estou aberto a oportunidades de estágio, jovem aprendiz ou posições iniciais em
+        TI.</p>
+
+      <div class="flex flex-wrap justify-center gap-4 pt-2">
+        <a href="mailto:viniciusduarte.of@gmail.com"
+          class="button-hover flex items-center gap-3 bg-gray-50 border border-gray-200 px-5 py-3 rounded-xl hover:bg-gray-100 transition text-sm font-medium text-gray-800">
+          <i class="fas fa-envelope text-gray-600"></i> E-mail
+        </a>
+        <a href="https://github.com/viniciusduarteof" target="_blank" rel="noopener noreferrer"
+          class="button-hover flex items-center gap-3 bg-gray-50 border border-gray-200 px-5 py-3 rounded-xl hover:bg-gray-100 transition text-sm font-medium text-gray-800">
+          <i class="fab fa-github text-gray-600"></i> GitHub
+        </a>
+        <a href="https://linkedin.com/in/viniciusduartedev" target="_blank" rel="noopener noreferrer"
+          class="button-hover flex items-center gap-3 bg-gray-50 border border-gray-200 px-5 py-3 rounded-xl hover:bg-gray-100 transition text-sm font-medium text-gray-800">
+          <i class="fab fa-linkedin-in text-gray-600"></i> LinkedIn
+        </a>
+        <a href="https://instagram.com/viniciusduarte.dev" target="_blank" rel="noopener noreferrer"
+          class="button-hover flex items-center gap-3 bg-gray-50 border border-gray-200 px-5 py-3 rounded-xl hover:bg-gray-100 transition text-sm font-medium text-gray-800">
+          <i class="fab fa-instagram text-gray-600"></i> Instagram
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="site-footer text-center text-xs text-gray-400 py-8 sm:py-10 px-4 border-t border-gray-100 mt-20">
+    <p>Feito por Vinícius Duarte usando HTML, CSS, JavaScript, Tailwind CSS, Geist Mono e Font Awesome.</p>
+    <p class="mt-3">© Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+
+</html>

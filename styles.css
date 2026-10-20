@@ -188,6 +188,238 @@ main section[id] {
   min-width: 0;
 }
 
+.formation-timeline-item article.certificate-formation {
+  padding-right: 7.5rem;
+  position: relative;
+}
+
+.certificate-trigger {
+  align-items: center;
+  background-color: #111827;
+  border: 1px solid #374151;
+  border-radius: 0.85rem 0 0 0.85rem;
+  color: #fff;
+  display: flex;
+  gap: 0.65rem;
+  height: 3.5rem;
+  justify-content: center;
+  padding-inline: 0.8rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(28%, -50%);
+  transition: background-color 0.2s ease, transform 0.25s ease;
+  width: 8.75rem;
+  z-index: 2;
+}
+
+.certificate-trigger:hover,
+.certificate-trigger:focus-visible {
+  background-color: #374151;
+  transform: translate(0, -50%);
+}
+
+.certificate-trigger i {
+  flex: none;
+  font-size: 1.1rem;
+}
+
+.certificate-trigger-label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.recognition-grid,
+.youtube-courses-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.recognition-card {
+  align-items: center;
+  gap: 1.25rem;
+  min-width: 0;
+  padding-right: 7.5rem;
+  position: relative;
+}
+
+.recognition-card > img {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  flex: none;
+  height: 8rem;
+  object-fit: contain;
+  padding: 0.25rem;
+  width: 10rem;
+}
+
+.recognition-card > div {
+  flex: 1;
+  min-width: 0;
+}
+
+.site-main > #cursos-youtube {
+  margin-top: 2.5rem;
+}
+
+.youtube-course-card {
+  align-items: center;
+  display: flex;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+.youtube-course-card > img {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  flex: none;
+  height: 7rem;
+  object-fit: cover;
+  width: 7rem;
+}
+
+.youtube-course-card > div {
+  min-width: 0;
+}
+
+.youtube-course-card {
+  padding-right: 7.5rem;
+  position: relative;
+}
+
+.certificate-dialog {
+  animation: certificate-dialog-open 0.35s cubic-bezier(0.2, 0.75, 0.25, 1) both;
+  background: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 1.25rem;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  height: min(90vh, 64rem);
+  margin: auto;
+  max-height: none;
+  max-width: none;
+  overflow: hidden;
+  padding: 0;
+  width: min(94vw, 92rem);
+}
+
+dialog.certificate-dialog:not([open]) {
+  display: none;
+}
+
+.certificate-dialog::backdrop {
+  animation: certificate-backdrop-open 0.25s ease both;
+  background: rgba(17, 24, 39, 0.72);
+  backdrop-filter: blur(5px);
+}
+
+.certificate-dialog-header {
+  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  flex: none;
+  gap: 1rem;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.certificate-dialog-header h2 {
+  color: #111827;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.certificate-dialog-close {
+  align-items: center;
+  background: #f3f4f6;
+  border-radius: 9999px;
+  color: #111827;
+  display: inline-flex;
+  flex: none;
+  height: 2.75rem;
+  justify-content: center;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  width: 2.75rem;
+}
+
+.certificate-dialog-close:hover {
+  background: #e5e7eb;
+  transform: rotate(90deg);
+}
+
+.certificate-preview {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 1.25rem;
+}
+
+.certificate-image-list {
+  align-content: center;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 32rem), 1fr));
+  justify-items: center;
+  min-height: 100%;
+}
+
+.certificate-image-list figure {
+  margin: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.certificate-image-list img {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  height: auto;
+  max-height: calc(90vh - 9rem);
+  object-fit: contain;
+  width: 100%;
+}
+
+.certificate-image-list figcaption {
+  color: #6b7280;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+
+.certificate-pdf {
+  border: 0;
+  height: 100%;
+  min-height: 24rem;
+  width: 100%;
+}
+
+.certificate-load-error {
+  color: #b91c1c;
+  padding: 1rem;
+  text-align: center;
+}
+
+@keyframes certificate-dialog-open {
+  from {
+    opacity: 0;
+    transform: translateY(1rem) scale(0.96) rotateX(-3deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotateX(0);
+  }
+}
+
+@keyframes certificate-backdrop-open {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .status-completed {
   background-color: #ecfdf5;
   color: #047857;
@@ -309,6 +541,63 @@ main section[id] {
     padding: 1.25rem;
   }
 
+  .certificate-formation {
+    padding-right: 7.25rem !important;
+  }
+
+  .certificate-trigger {
+    height: 3rem;
+    transform: translate(8%, -50%);
+  }
+
+  .certificate-dialog {
+    border-radius: 1rem;
+    height: 92vh;
+    width: 94vw;
+  }
+
+  .certificate-dialog-header {
+    padding: 0.75rem 1rem;
+  }
+
+  .certificate-dialog-header h2 {
+    font-size: 0.875rem;
+  }
+
+  .certificate-preview {
+    padding: 0.75rem;
+  }
+
+  .certificate-image-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .certificate-image-list img {
+    max-height: calc(92vh - 8rem);
+  }
+
+  .recognition-grid,
+  .youtube-courses-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .recognition-card {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1.25rem 7.25rem 1.25rem 1.25rem;
+  }
+
+  .recognition-card > img {
+    height: auto;
+    max-height: 12rem;
+    width: 100%;
+  }
+
+  .youtube-course-card {
+    align-items: flex-start;
+    padding-right: 7.25rem;
+  }
+
   .formation-timeline-item article h3 {
     font-size: 1.125rem;
     line-height: 1.5;
@@ -316,5 +605,12 @@ main section[id] {
 
   .formation-status {
     white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .certificate-dialog,
+  .certificate-dialog::backdrop {
+    animation: none;
   }
 }

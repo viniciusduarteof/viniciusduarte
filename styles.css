@@ -240,17 +240,16 @@ main section[id] {
 
 .recognition-card {
   align-items: center;
+  display: grid;
   gap: 1.25rem;
+  grid-template-columns: 10rem minmax(0, 1fr);
   min-width: 0;
-  padding-right: 7.5rem;
-  position: relative;
 }
 
 .recognition-card > img {
   background: #f9fafb;
   border: 1px solid #e5e7eb;
   border-radius: 0.75rem;
-  flex: none;
   height: 8rem;
   object-fit: contain;
   padding: 0.25rem;
@@ -258,8 +257,24 @@ main section[id] {
 }
 
 .recognition-card > div {
-  flex: 1;
   min-width: 0;
+}
+
+.recognition-card > .certificate-trigger,
+.youtube-course-card > .certificate-trigger {
+  border-radius: 0.85rem;
+  grid-column: 1 / -1;
+  justify-self: end;
+  position: static;
+  transform: none;
+  width: fit-content;
+}
+
+.recognition-card > .certificate-trigger:hover,
+.recognition-card > .certificate-trigger:focus-visible,
+.youtube-course-card > .certificate-trigger:hover,
+.youtube-course-card > .certificate-trigger:focus-visible {
+  transform: none;
 }
 
 .site-main > #cursos-youtube {
@@ -268,8 +283,9 @@ main section[id] {
 
 .youtube-course-card {
   align-items: center;
-  display: flex;
+  display: grid;
   gap: 1.25rem;
+  grid-template-columns: 7rem minmax(0, 1fr);
   min-width: 0;
 }
 
@@ -277,7 +293,6 @@ main section[id] {
   background: #f9fafb;
   border: 1px solid #e5e7eb;
   border-radius: 0.75rem;
-  flex: none;
   height: 7rem;
   object-fit: cover;
   width: 7rem;
@@ -285,11 +300,6 @@ main section[id] {
 
 .youtube-course-card > div {
   min-width: 0;
-}
-
-.youtube-course-card {
-  padding-right: 7.5rem;
-  position: relative;
 }
 
 .certificate-dialog {
@@ -530,6 +540,7 @@ dialog.certificate-dialog:not([open]) {
 
   .site-main {
     padding-bottom: 1.5rem;
+    padding-inline: 0;
     padding-top: 1.5rem;
   }
 
@@ -537,17 +548,38 @@ dialog.certificate-dialog:not([open]) {
     max-width: min(100%, 18rem);
   }
 
+  .skill-pill {
+    flex: 0 1 auto;
+    max-width: 100%;
+    white-space: normal;
+  }
+
   .formation-timeline-item article {
     padding: 1.25rem;
   }
 
   .certificate-formation {
-    padding-right: 7.25rem !important;
+    padding-right: 1.25rem !important;
   }
 
   .certificate-trigger {
     height: 3rem;
-    transform: translate(8%, -50%);
+    position: static;
+    transform: none;
+    width: fit-content;
+  }
+
+  .formation-timeline-item article.certificate-formation > .certificate-trigger,
+  .recognition-card > .certificate-trigger,
+  .youtube-course-card > .certificate-trigger {
+    align-self: flex-start;
+    border-radius: 0.85rem;
+    margin-top: 0.25rem;
+  }
+
+  .certificate-trigger:hover,
+  .certificate-trigger:focus-visible {
+    transform: none;
   }
 
   .certificate-dialog {
@@ -584,7 +616,7 @@ dialog.certificate-dialog:not([open]) {
   .recognition-card {
     align-items: flex-start;
     flex-direction: column;
-    padding: 1.25rem 7.25rem 1.25rem 1.25rem;
+    padding: 1.25rem;
   }
 
   .recognition-card > img {
@@ -594,8 +626,19 @@ dialog.certificate-dialog:not([open]) {
   }
 
   .youtube-course-card {
-    align-items: flex-start;
-    padding-right: 7.25rem;
+    align-items: start;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    padding: 1.25rem;
+  }
+
+  .youtube-course-card > img {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .youtube-course-card > .certificate-trigger {
+    grid-column: 1 / -1;
   }
 
   .formation-timeline-item article h3 {
@@ -605,6 +648,13 @@ dialog.certificate-dialog:not([open]) {
 
   .formation-status {
     white-space: normal;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .recognition-grid,
+  .youtube-courses-grid {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 

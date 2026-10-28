@@ -25,6 +25,44 @@ body {
   min-height: 2.75rem;
 }
 
+.contact-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+  max-width: 32rem;
+  margin: 0.5rem auto 0;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  min-height: 3rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.85rem;
+  background-color: #f9fafb;
+  color: #374151;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-link:hover {
+  transform: translateY(-2px);
+  border-color: #d1d5db;
+  background-color: #fff;
+  box-shadow: 0 6px 16px -8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-link:last-child {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: calc(50% - 0.325rem);
+}
+
 .skip-link {
   background: #111827;
   border-radius: 0 0 0.75rem 0.75rem;
@@ -648,6 +686,19 @@ dialog.certificate-dialog:not([open]) {
 
   .formation-status {
     white-space: normal;
+  }
+}
+
+@media (min-width: 640px) {
+  .contact-links {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: 38rem;
+  }
+
+  .contact-link:last-child {
+    grid-column: auto;
+    justify-self: stretch;
+    width: auto;
   }
 }
 

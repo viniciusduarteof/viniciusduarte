@@ -269,8 +269,7 @@ main section[id] {
   white-space: nowrap;
 }
 
-.recognition-grid,
-.youtube-courses-grid {
+.recognition-grid {
   display: grid;
   gap: 1.25rem;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -298,8 +297,7 @@ main section[id] {
   min-width: 0;
 }
 
-.recognition-card > .certificate-trigger,
-.youtube-course-card > .certificate-trigger {
+.recognition-card > .certificate-trigger {
   border-radius: 0.85rem;
   grid-column: 1 / -1;
   justify-self: end;
@@ -309,35 +307,8 @@ main section[id] {
 }
 
 .recognition-card > .certificate-trigger:hover,
-.recognition-card > .certificate-trigger:focus-visible,
-.youtube-course-card > .certificate-trigger:hover,
-.youtube-course-card > .certificate-trigger:focus-visible {
+.recognition-card > .certificate-trigger:focus-visible {
   transform: none;
-}
-
-.site-main > #cursos-youtube {
-  margin-top: 2.5rem;
-}
-
-.youtube-course-card {
-  align-items: center;
-  display: grid;
-  gap: 1.25rem;
-  grid-template-columns: 7rem minmax(0, 1fr);
-  min-width: 0;
-}
-
-.youtube-course-card > img {
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
-  border-radius: 0.75rem;
-  height: 7rem;
-  object-fit: cover;
-  width: 7rem;
-}
-
-.youtube-course-card > div {
-  min-width: 0;
 }
 
 .certificate-dialog {
@@ -608,8 +579,7 @@ dialog.certificate-dialog:not([open]) {
   }
 
   .formation-timeline-item article.certificate-formation > .certificate-trigger,
-  .recognition-card > .certificate-trigger,
-  .youtube-course-card > .certificate-trigger {
+  .recognition-card > .certificate-trigger {
     align-self: flex-start;
     border-radius: 0.85rem;
     margin-top: 0.25rem;
@@ -646,8 +616,7 @@ dialog.certificate-dialog:not([open]) {
     max-height: calc(92vh - 8rem);
   }
 
-  .recognition-grid,
-  .youtube-courses-grid {
+  .recognition-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 
@@ -661,22 +630,6 @@ dialog.certificate-dialog:not([open]) {
     height: auto;
     max-height: 12rem;
     width: 100%;
-  }
-
-  .youtube-course-card {
-    align-items: start;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr);
-    padding: 1.25rem;
-  }
-
-  .youtube-course-card > img {
-    height: 5rem;
-    width: 5rem;
-  }
-
-  .youtube-course-card > .certificate-trigger {
-    grid-column: 1 / -1;
   }
 
   .formation-timeline-item article h3 {
@@ -703,8 +656,7 @@ dialog.certificate-dialog:not([open]) {
 }
 
 @media (min-width: 640px) and (max-width: 1023px) {
-  .recognition-grid,
-  .youtube-courses-grid {
+  .recognition-grid {
     grid-template-columns: minmax(0, 1fr);
   }
 }

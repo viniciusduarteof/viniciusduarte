@@ -8,8 +8,25 @@
   <meta name="description"
     content="Site de Vinícius Duarte, desenvolvedor de software em formação. Conheça suas habilidades, formação e formas de contato.">
   <meta name="theme-color" content="#ffffff">
+  <meta name="color-scheme" content="light dark">
+  <link id="site-favicon" rel="icon" type="image/png" sizes="768x768" href="img/favicon-light.png">
   <title>Vinícius Duarte</title>
-  <link rel="icon" type="image/png" sizes="512x512" href="img/favicon.png">
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('site-theme');
+      document.documentElement.dataset.theme = savedTheme === 'light' || savedTheme === 'dark'
+        ? savedTheme
+        : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    } catch (error) {
+      document.documentElement.dataset.theme = window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light';
+      console.warn('Não foi possível carregar a preferência de tema salva.', error);
+    }
+    document.getElementById('site-favicon').href = document.documentElement.dataset.theme === 'dark'
+      ? 'img/favicon-dark.png'
+      : 'img/favicon-light.png';
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <script src="https://cdn.tailwindcss.com" defer></script>
@@ -26,8 +43,9 @@
 
   <!-- Header / Logo -->
   <header class="site-header mx-auto py-6 sm:py-8 flex flex-col sm:flex-row justify-between items-center gap-5">
-    <a href="#" aria-label="Vinícius Duarte - início">
-      <img src="img/logo.png" alt="Vinícius Duarte" class="h-16 w-auto object-contain">
+    <a class="site-logo-link" href="#" aria-label="Vinícius Duarte - início">
+      <img src="img/logo-light.png" alt="" aria-hidden="true" class="site-logo site-logo-light">
+      <img src="img/logo-dark.png" alt="" aria-hidden="true" class="site-logo site-logo-dark">
     </a>
     <nav class="site-nav flex flex-wrap justify-center gap-x-5 gap-y-3 text-xs sm:text-sm font-medium text-gray-600">
       <a href="#sobre" class="hover:text-black transition">Sobre</a>
@@ -36,6 +54,12 @@
       <a href="#reconhecimentos" class="hover:text-black transition">Reconhecimentos</a>
       <a href="#contato" class="hover:text-black transition">Contato</a>
     </nav>
+    <button class="theme-toggle" type="button" aria-label="Ativar modo escuro" aria-pressed="false">
+      <span class="theme-toggle-thumb" aria-hidden="true">
+        <i class="fa-solid fa-sun"></i>
+        <i class="fa-solid fa-moon"></i>
+      </span>
+    </button>
   </header>
 
   <main id="conteudo" class="site-main mx-auto py-10 space-y-28">
@@ -61,7 +85,7 @@
             </span>
           </h1>
           <p class="text-sm text-gray-400 mt-1 flex items-center gap-1.5 justify-center md:justify-start">
-            <i class="fa-solid fa-code text-xs"></i> dev backend em formação
+            <i class="fa-solid fa-code text-xs"></i> dev em formação
           </p>
         </div>
       </div>
@@ -69,7 +93,7 @@
       <!-- Coluna de Apresentação -->
       <div class="md:col-span-7 space-y-8 text-lg text-gray-600 leading-relaxed">
         <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-gray-900 leading-tight">
-          💻 Desenvolvedor backend em formação focado em criar aplicações eficientes com organização e
+          💻 Desenvolvedor de software em formação focado em criar aplicações eficientes com organização e
           otimização.
         </h2>
 

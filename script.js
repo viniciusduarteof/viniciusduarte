@@ -1,4 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const themeToggle = document.querySelector('.theme-toggle');
+  const themeColor = document.querySelector('meta[name="theme-color"]');
+  const siteFavicon = document.querySelector('#site-favicon');
+
+  if (themeToggle) {
+    const updateThemeToggle = (theme) => {
+      const isDark = theme === 'dark';
+
+      document.documentElement.dataset.theme = theme;
+      themeToggle.dataset.theme = theme;
+      themeToggle.setAttribute('aria-pressed', String(isDark));
+      themeToggle.setAttribute('aria-label', isDark ? 'Ativar modo claro' : 'Ativar modo escuro');
+
+      if (themeColor) themeColor.content = isDark ? '#111827' : '#ffffff';
+      if (siteFavicon) siteFavicon.href = isDark ? 'img/favicon-dark.png' : 'img/favicon-light.png';
+    };
+
+    updateThemeToggle(document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light');
+
+    themeToggle.addEventListener('click', () => {
+      const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      updateThemeToggle(nextTheme);
+
+      try {
+        window.localStorage.setItem('site-theme', nextTheme);
+      } catch (error) {
+        console.warn('Não foi possível salvar a preferência de tema.', error);
+      }
+    });
+  }
+
   const profileCard = document.querySelector('.profile-card');
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const typingName = document.querySelector('.typing-name');

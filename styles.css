@@ -546,6 +546,10 @@ dialog.certificate-dialog:not([open]) {
   overflow-wrap: anywhere;
 }
 
+.site-footer p:not(:last-child) {
+  color: #fff;
+}
+
 .profile-card {
   transform: perspective(900px) rotateX(var(--profile-rotate-x, 0deg)) rotateY(var(--profile-rotate-y, 0deg)) scale(var(--profile-scale, 1));
   transform-style: preserve-3d;
@@ -1232,6 +1236,11 @@ html[data-theme="dark"] .status-in-progress {
 
   html body .site-main .formation-timeline-item article > img {
     height: 7rem;
+  }
+
+  html body .site-main .formation-timeline-item article > img[src="img/etec.png"] {
+    height: auto;
+    object-fit: contain;
   }
 
   html body .site-main .recognition-card > img {

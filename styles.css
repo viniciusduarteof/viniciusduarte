@@ -550,6 +550,10 @@ dialog.certificate-dialog:not([open]) {
   color: #fff;
 }
 
+html[data-theme="light"] .site-footer p:first-child {
+  color: #111827;
+}
+
 .profile-card {
   transform: perspective(900px) rotateX(var(--profile-rotate-x, 0deg)) rotateY(var(--profile-rotate-y, 0deg)) scale(var(--profile-scale, 1));
   transform-style: preserve-3d;

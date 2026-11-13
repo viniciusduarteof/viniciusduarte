@@ -1174,9 +1174,10 @@ html[data-theme="dark"] .status-in-progress {
 
   html body .site-header .site-nav {
     flex: 0 0 100%;
-    font-size: 0.75rem;
+    flex-wrap: nowrap;
+    font-size: clamp(0.5625rem, 2.55vw, 0.625rem);
     grid-area: nav;
-    gap: 0.25rem 0.5rem;
+    gap: 0;
     justify-content: center;
     line-height: 1.35;
     width: 100%;

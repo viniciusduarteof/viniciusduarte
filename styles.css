@@ -28,11 +28,17 @@ body {
 }
 
 .site-logo-dark,
-html[data-theme="dark"] .site-logo-light {
+.theme-image-dark,
+html[data-theme="dark"] .site-logo-light,
+html[data-theme="dark"] .theme-image-light {
   display: none;
 }
 
 html[data-theme="dark"] .site-logo-dark {
+  display: block;
+}
+
+html[data-theme="dark"] .theme-image-dark {
   display: block;
 }
 
@@ -309,6 +315,14 @@ main section[id] {
 
 .formation-timeline-item article {
   position: relative;
+}
+
+html body .site-main .formation-timeline-item article > img.wizkids-logo {
+  align-self: center;
+  height: 9rem;
+  max-width: 14rem;
+  object-position: center 8%;
+  width: 100%;
 }
 
 .formation-timeline-item article .flex-1 > div:first-child {
